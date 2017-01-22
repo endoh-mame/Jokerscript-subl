@@ -1,13 +1,14 @@
 # Jokerscript-subl
 
 JokerscriptのSublime Text用パッケージ
+Sublime Text 3, Mac OSXで動作確認済み
+
 
 # 機能
 
 - シンタックスハイライト
 - 入力補完
 	command+shift+jでオン/オフ切り替え
-
 
 # MEMO
 - 「Preferences」→「Key Bindings - User」を編集

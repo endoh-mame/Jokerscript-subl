@@ -1,11 +1,6 @@
 import sublime, sublime_plugin
 
-# 自作パッケージを使う
 import os, sys
-
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-from mypackage import mymodule
-from mypackage.mymodule import myfunc
 
 # コメントアウトコマンド
 class JokerscriptCommentCommand(sublime_plugin.TextCommand):
@@ -72,7 +67,6 @@ class JokerscriptSublCommand(sublime_plugin.TextCommand):
 		settings = sublime.load_settings('JokerscriptSubl.sublime-settings')
 		settings.set('isComplete', not settings.get('isComplete'))
 		isComplete = settings.get('isComplete')
-		# print(isComplete)
 
 # 自動補完
 class CompleteJoker(sublime_plugin.EventListener):
