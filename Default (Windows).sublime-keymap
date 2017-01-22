@@ -1,10 +1,10 @@
 [
     { 
-    	"keys": ["super+shift+j"], 
+    	"keys": ["ctrl+shift+j"], 
     	"command": "jokerscript_subl", 
     },
     { 
-    	"keys": ["super+/"], 
+    	"keys": ["ctrl+/"], 
     	"command": "jokerscript_comment"
     }
 ]

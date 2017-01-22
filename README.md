@@ -1,8 +1,10 @@
 # Jokerscript-subl
 
 JokerscriptのSublime Text用パッケージ
+
 Sublime Text 3, Mac OSXで動作確認済み
 
+Windows, LINUX環境用のキーマップファイルは設置済み
 
 # 機能
 
