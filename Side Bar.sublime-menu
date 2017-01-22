@@ -1,0 +1,9 @@
+// プロジェクト上で右クリック実行
+
+[
+    {
+        "id": "JokerscriptSubl",
+        "caption": "JokerscriptSubl",
+        "command": "jokerscript_subl"
+    }
+]

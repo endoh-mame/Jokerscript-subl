@@ -1,0 +1,214 @@
+{
+  "name": "JokerScript",
+  "scopeName": "source.txt",
+  "fileTypes": ["txt"],
+  "patterns": [
+	{
+		"name": "tag.jks",
+		"begin": "(\\[)([a-zA-Z0-9_]+)",
+		"beginCaptures": {
+      "1": { "name": "punctuation.section.tag.jks" },
+      "2": { "name": "entity.name.tag.jks" }
+		},
+		"end": "(\\])",
+		"endCaptures": {
+		"0": { "name": "punctuation.section.tag.jks" }
+		},
+  	"patterns": 
+    [
+    {
+      "name": "tag.singlequotes.jks",
+      "begin": "([\\w]+)\\s*(=)\\s*(')",
+      "beginCaptures": {
+        "1": { "name": "entity.other.attribute-name.jks" },
+        "2": { "name": "punctuation.section.tag.jks" },
+        "3": { "name": "punctuation.definition.string.begin.jks" }
+      },
+      "end": "(')",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.string.end.jks" }
+      },
+      "patterns":
+      [
+      {
+        "name": "label.tag.jks",
+        "match": "([*])([\\w-_]+)",
+        "captures": {
+            "0": {
+                "name": "storage.type.label.jks"
+            }
+        }
+        },
+      {
+        "name": "tag.properties.jks",
+        "match": "([\\w ?.,\\\"_\\-*=\\(\\)]+)",
+        "captures": {
+          "1": { "name": "string.jks" }
+        }
+      }]
+    },
+    {
+      "name": "tag.doublequotes.jks",
+      "begin": "([\\w]+)\\s*(=)\\s*(\\\")",
+      "beginCaptures": {
+        "1": { "name": "entity.other.attribute-name.jks" },
+        "2": { "name": "punctuation.section.tag.jks" },
+        "3": { "name": "punctuation.definition.string.begin.jks" }
+      },
+      "end": "(\\\")",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.string.end.jks" }
+      },
+      "patterns":
+      [
+      {
+        "name": "label.tag.jks",
+        "match": "([*])([\\w-_]+)",
+        "captures": {
+            "0": {
+                "name": "storage.type.label.jks"
+            }
+        }
+        },
+      {
+        "name": "tag.properties.jks",
+        "match": "([\\w &><;?.,\\'_\\-*=\\(\\)]+)",
+        "captures": {
+          "1": { "name": "string.jks" }
+        }
+      }]
+    },
+    {
+        "name": "tag.noquotes.jks",
+        "match": "([\\w]+)\\s*(=)\\s*([\\w0-9-_]{0,}+)",
+        "captures": {
+              "1": { "name": "entity.other.attribute-name.jks" },
+              "2": { "name": "punctuation.section.tag.jks" },
+              "3": { "name": "string.jks" }
+        }
+    }
+    ]
+	},
+  {
+    "name": "tag.jks",
+    "begin": "^[ \t]{0,}+@([a-zA-Z0-9_]+)",
+    "beginCaptures": {
+      "0": { "name": "punctuation.section.tag.jks" },
+      "1": { "name": "entity.name.tag.jks" }
+    },
+    "end": "(\\n)",
+    "endCaptures": {
+    "0": { "name": "punctuation.section.tag.jks" }
+    },
+    "patterns": 
+    [
+    {
+      "name": "tag.singlequotes.jks",
+      "begin": "([\\w]+)\\s*(=)\\s*(')",
+      "beginCaptures": {
+        "1": { "name": "entity.other.attribute-name.jks" },
+        "2": { "name": "punctuation.section.tag.jks" },
+        "3": { "name": "punctuation.definition.string.begin.jks" }
+      },
+      "end": "(')",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.string.end.jks" }
+      },
+      "patterns":
+      [
+      {
+        "name": "label.tag.jks",
+        "match": "([*])([\\w-_]+)",
+        "captures": {
+            "0": {
+                "name": "storage.type.label.jks"
+            }
+        }
+        },
+      {
+        "name": "tag.properties.jks",
+        "match": "([\\w ?.,\\\"_\\-*=\\(\\)]+)",
+        "captures": {
+          "1": { "name": "string.jks" }
+        }
+      }]
+    },
+    {
+      "name": "tag.doublequotes.jks",
+      "begin": "([\\w]+)\\s*(=)\\s*(\\\")",
+      "beginCaptures": {
+        "1": { "name": "entity.other.attribute-name.jks" },
+        "2": { "name": "punctuation.section.tag.jks" },
+        "3": { "name": "punctuation.definition.string.begin.jks" }
+      },
+      "end": "(\\\")",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.string.end.jks" }
+      },
+      "patterns":
+      [
+      {
+        "name": "label.tag.jks",
+        "match": "([*])([\\w-_]+)",
+        "captures": {
+            "0": {
+                "name": "storage.type.label.jks"
+            }
+        }
+        },
+      {
+        "name": "tag.properties.jks",
+        "match": "([\\w &><;?.,\\'_\\-*=\\(\\)]+)",
+        "captures": {
+          "1": { "name": "string.jks" }
+        }
+      }]
+    },
+    {
+        "name": "tag.noquotes.jks",
+        "match": "([\\w]+)\\s*(=)\\s*([\\w0-9-_]{0,}+)",
+        "captures": {
+              "1": { "name": "entity.other.attribute-name.jks" },
+              "2": { "name": "punctuation.section.tag.jks" },
+              "3": { "name": "string.jks" }
+        }
+    }
+    ]
+  },
+    {
+        "name": "comment.line.semicolon.jks",
+        "match": "(;)(?!\\[\\[).*$\\n?",
+        "captures": {
+            "1": {
+              "name": "punctuation.definition.comment.jks"
+            }
+        }
+    },
+    {
+        "name": "label.jks",
+        "match": "^\\s*([*])([\\w-_]+)\\s*|\\s*([\\w-_ ]+?)",
+        "captures": {
+              "1": { "name": "storage.type.label.jks" },
+              "2": { "name": "storage.type.label.jks" },
+              "3": { "name": "punctuation.section.tag.jks" }
+        }
+    },
+    {
+        "name": "name.jks",
+        "match": "^\\s*([#])([\\w-_]+)\\s*|\\s*([\\w-_ ]+?)",
+        "captures": {
+              "1": { "name": "constant.other.name.jks" },
+              "2": { "name": "constant.other.name.jks" },
+              "3": { "name": "constant.other.name.jks" }
+
+        }
+    },
+    {
+        "name": "comment.block.cb.jks",
+        "begin": "/\\*",
+        "end": "\\*/"
+    }
+  ]
+  ,
+  "uuid": "49f5eb12-68fb-4c54-b1f9-f6441fce02a3"
+}
