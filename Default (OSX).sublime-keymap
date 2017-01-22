@@ -1,0 +1,11 @@
+[
+	// cmd + shift + h で実行
+    { 
+    	"keys": ["super+shift+j"], 
+    	"command": "jokerscript_subl", 
+    },
+    { 
+    	"keys": ["super+/"], 
+    	"command": "jokerscript_comment"
+    }
+]
