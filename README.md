@@ -1,6 +1,6 @@
 # Jokerscript-subl
 
-![Output sample](https://raw.githubusercontent.com/endoh-mame/Jokerscript-subl/master/demo/jks-subl.gif =640x)
+![Output sample](https://raw.githubusercontent.com/endoh-mame/Jokerscript-subl/master/demo/jks-subl.gif)
 
 # Overview
 
